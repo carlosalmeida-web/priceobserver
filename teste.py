@@ -3,7 +3,7 @@ Testes automatizados
 """
 
 import unittest
-from funcoes_auxiliares import validar_nome, extrair_numero
+from funcoes_auxiliares import validar_nome, extrair_numero, verifica_mudanca
 
 class Testador(unittest.TestCase):
 
@@ -23,6 +23,12 @@ class Testador(unittest.TestCase):
 
     def test_extrair_numero_sem_numero(self):
         self.assertIsNone(extrair_numero("Sem preço"))
+
+    def test_verifica_mudanca_true(self):
+        self.assertTrue(verifica_mudanca(10.0, 12.0))
+
+    def test_verifica_mudanca_false(self):
+        self.assertFalse(verifica_mudanca(10.0, 10.0))
 
 if __name__ == "__main__":
     unittest.main()
