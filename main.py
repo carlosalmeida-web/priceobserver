@@ -1,4 +1,4 @@
-﻿﻿from funcoes_auxiliares import validar_nome, extrair_numero
+from funcoes_auxiliares import validar_nome, extrair_numero, verifica_mudanca
 
 def monitorar_preco():
     print("<<<< MONITOR DE PRECO >>>>")
