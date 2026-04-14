@@ -1,6 +1,7 @@
-# Arquivo com as funções auxiliares
+﻿# Arquivo com as funções auxiliares
 
 import re
+from datetime import datetime
 
 def validar_nome(nome):
     """
@@ -57,3 +58,16 @@ def verifica_mudanca(valor_antigo, valor_novo):
     Retorna True se o valor mudou.
     """
     return valor_antigo != valor_novo
+
+def registrar_log(usuario, mensagem):
+    """
+    Registra uma mensagem de log em um arquivo .txt e imprime a mensagem no terminal
+    USAR NO LUGAR DO PRINTT
+    """
+    timestamp_atual = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    linha = f"[{timestamp_atual}] [Usuário: {usuario}] {mensagem}\n"
+
+    with open("logs.txt", "a", encoding="utf-8") as arquivo:
+        arquivo.write(linha)
+
+    print(linha)
