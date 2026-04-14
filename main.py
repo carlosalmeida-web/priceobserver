@@ -1,4 +1,4 @@
-from funcoes_auxiliares import validar_nome, extrair_numero, verifica_mudanca
+﻿from funcoes_auxiliares import validar_nome, extrair_numero, verifica_mudanca, registrar_log
 
 def monitorar_preco():
     print("<<<< MONITOR DE PRECO >>>>")
@@ -10,9 +10,10 @@ def monitorar_preco():
     url = input("Digite a URL para monitorar: ").strip()
     xpath_campo = input("Digite o XPath do campo: ").strip()
 
-    print(f"Usuario: {nome_usuario}")
-    print(f"URL informada: {url}")
-    print(f"XPath informado: {xpath_campo}")
+    registrar_log(nome_usuario, "Sistema iniciado!")
+    registrar_log(nome_usuario, f"Usuario informado: {nome_usuario}")
+    registrar_log(nome_usuario, f"URL informada: {url}")
+    registrar_log(nome_usuario, f"XPath informado: {xpath_campo}")
 
 if __name__ == "__main__":
     monitorar_preco()

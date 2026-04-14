@@ -1,0 +1,4 @@
+[08/04/2026 01:28:02] [Usuário: Joao] Sistema iniciado!
+[08/04/2026 01:28:02] [Usuário: Joao] Usuario informado: Joao
+[08/04/2026 01:28:02] [Usuário: Joao] URL informada: aaa
+[08/04/2026 01:28:02] [Usuário: Joao] XPath informado: aaa

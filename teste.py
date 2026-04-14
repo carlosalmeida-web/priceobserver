@@ -24,11 +24,12 @@ class Testador(unittest.TestCase):
     def test_extrair_numero_sem_numero(self):
         self.assertIsNone(extrair_numero("Sem preço"))
 
-    def test_verifica_mudanca_true(self):
-        self.assertTrue(verifica_mudanca(10.0, 12.0))
+    def test_verifica_valor_igual(self):
+        self.assertFalse(verifica_mudanca(1, 1))
+    
+    def test_verifica_valor_diferente(self):
+        self.assertTrue(verifica_mudanca(1, 2))
 
-    def test_verifica_mudanca_false(self):
-        self.assertFalse(verifica_mudanca(10.0, 10.0))
 
 if __name__ == "__main__":
     unittest.main()
