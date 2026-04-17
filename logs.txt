@@ -1,4 +1,71 @@
-[08/04/2026 01:28:02] [Usuário: Joao] Sistema iniciado!
-[08/04/2026 01:28:02] [Usuário: Joao] Usuario informado: Joao
-[08/04/2026 01:28:02] [Usuário: Joao] URL informada: aaa
-[08/04/2026 01:28:02] [Usuário: Joao] XPath informado: aaa
+[08/04/2026 09:36:56] [Usuário: Joao] Sistema iniciado!
+[08/04/2026 09:36:56] [Usuário: Joao] Usuario informado: Joao
+[08/04/2026 09:36:56] [Usuário: Joao] URL informada: http://127.0.0.1:5500/commits/8/index.html
+[08/04/2026 09:36:56] [Usuário: Joao] XPath informado: //*[@id="preco"]
+[08/04/2026 09:37:07] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:37:07] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:37:07] [Usuário: Joao] Valor '100.0' encontrado no texto: '100.0 $'
+[08/04/2026 09:57:06] [Usuário: Joao] Sistema iniciado!
+[08/04/2026 09:57:06] [Usuário: Joao] URL informada: http://127.0.0.1:5500/commits/8/index.html
+[08/04/2026 09:57:06] [Usuário: Joao] XPath informado: //*[@id="preco"]
+[08/04/2026 09:57:06] [Usuário: Joao] Intervalo informado: 5 segundos
+[08/04/2026 09:57:16] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:57:16] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:57:16] [Usuário: Joao] Valor inicial encontrado: 100.0
+[08/04/2026 09:57:23] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:57:23] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:57:23] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:57:30] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:57:30] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:57:30] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:57:37] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:57:37] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:57:37] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:57:44] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:57:44] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:57:44] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:57:51] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:57:51] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:57:51] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:57:58] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:57:58] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:57:58] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:58:06] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:58:06] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:58:06] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:58:13] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:58:13] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:58:13] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:58:20] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:58:20] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:58:20] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:58:27] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:58:27] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:58:27] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:58:34] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:58:34] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:58:34] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:58:41] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:58:41] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:58:41] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:58:48] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:58:48] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:58:48] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:58:55] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:58:55] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:58:55] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:59:03] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:59:03] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:59:03] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:59:10] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:59:10] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:59:10] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:59:17] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:59:17] [Usuário: Joao] Texto encontrado no campo: 100.0 $
+[08/04/2026 09:59:17] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 100.0
+[08/04/2026 09:59:24] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:59:24] [Usuário: Joao] Texto encontrado no campo: 10.0 $
+[08/04/2026 09:59:24] [Usuário: Joao] Alteracao detectada. Valor antigo: 100.0 | Valor novo: 10.0
+[08/04/2026 09:59:31] [Usuário: Joao] Campo localizado com XPath: //*[@id="preco"]
+[08/04/2026 09:59:31] [Usuário: Joao] Texto encontrado no campo: 10.0 $
+[08/04/2026 09:59:31] [Usuário: Joao] Nenhuma alteracao detectada. Valor atual continua: 10.0
