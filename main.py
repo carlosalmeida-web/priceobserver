@@ -1,6 +1,6 @@
 ﻿from funcoes_auxiliares import validar_nome, extrair_numero, verifica_mudanca, registrar_log
 
-import time 
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -22,7 +22,7 @@ def ler_valor_pagina(driver, url, xpath_campo, usuario):
     Depois extrai o número do texto.
     """
     driver.get(url)
-    time.sleep(2)
+    time.sleep(5)
 
     elemento = driver.find_element(By.XPATH, xpath_campo) # Colocamos como parametro o tipo de busca que sera utilizada para encontrar o elemento e expressão XPath inteira que queremos encontrar
     texto = elemento.text.strip()
@@ -32,9 +32,31 @@ def ler_valor_pagina(driver, url, xpath_campo, usuario):
 
     valor = extrair_numero(texto)
 
-    return valor, texto
+    return valor
+
+def enviar_para_outra_pagina(driver_pesquisa, valor_antigo, valor_novo, usuario):
+    """
+    Abre o a pagina de formulario em um segundo navegador e realiza a pesquisa.
+    """
+
+    mensagem = f"Preco alterado de {valor_antigo} para {valor_novo}"
+    url_formulario = "http://127.0.0.1:5500/commits/10/forms.html"
+
+    driver_pesquisa.get(url_formulario)
+    time.sleep(5)
+
+    campo_texto = driver_pesquisa.find_element(By.XPATH, '//*[@id="campoMensagem"]')
+    campo_texto.clear()
+    campo_texto.send_keys(mensagem)
+
+    botao = driver_pesquisa.find_element(By.XPATH, '//*[@id="botaoSubmit"]')
+    botao.click()
+    time.sleep(10)
+
+    registrar_log(usuario, "Botão da segunda página clicado com sucesso.")
 
 def monitorar_preco():
+
     print("<<<< MONITOR DE PRECO >>>>")
 
     nome_usuario = input("Digite seu nome: ").strip()
@@ -43,11 +65,43 @@ def monitorar_preco():
 
     url = input("Digite a URL para monitorar: ").strip()
     xpath_campo = input("Digite o XPath do campo: ").strip()
+    intervalo = int(input("Digite o intervalo de tempo do monitoramento (segundos): ").strip())
 
     registrar_log(nome_usuario, "Sistema iniciado!")
-    registrar_log(nome_usuario, f"Usuario informado: {nome_usuario}")
     registrar_log(nome_usuario, f"URL informada: {url}")
     registrar_log(nome_usuario, f"XPath informado: {xpath_campo}")
+    registrar_log(nome_usuario, f"Intervalo informado: {intervalo} segundos")
+
+    try:
+        driver_monitor = iniciar_driver()
+        driver_pesquisa = iniciar_driver()
+
+        valor_anterior = ler_valor_pagina(driver_monitor, url, xpath_campo, nome_usuario)
+        registrar_log(nome_usuario, f"Valor inicial encontrado: {valor_anterior}")
+
+        while True: 
+            time.sleep(intervalo)
+
+            valor_atual = ler_valor_pagina(driver_monitor, url, xpath_campo, nome_usuario)
+
+            if verifica_mudanca(valor_anterior, valor_atual):
+                print("\nALTERACAO DETECTADA!")
+                print(f"Valor antigo: {valor_anterior}")
+                print(f"Valor novo: {valor_atual}")
+
+                registrar_log(
+                    nome_usuario,
+                    f"Alteracao detectada. Valor antigo: {valor_anterior} | Valor novo: {valor_atual}"
+                )   
+
+                enviar_para_outra_pagina(driver_pesquisa, valor_anterior, valor_atual, nome_usuario)
+
+                valor_anterior = valor_atual
+            else:
+                registrar_log(nome_usuario, f"Nenhuma alteracao detectada. Valor atual continua: {valor_atual}")
+
+    except Exception as e:
+        registrar_log(nome_usuario, f"Erro encontrado: {e}")
 
     driver_monitor = iniciar_driver()
 
