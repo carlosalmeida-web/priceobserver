@@ -103,5 +103,13 @@ def monitorar_preco():
     except Exception as e:
         registrar_log(nome_usuario, f"Erro encontrado: {e}")
 
+    driver_monitor = iniciar_driver()
+
+    try:
+        valor, texto = ler_valor_pagina(driver_monitor, url, xpath_campo, nome_usuario)
+        registrar_log(nome_usuario, f"Valor '{valor}' encontrado no texto: '{texto}'")
+    except Exception as e:
+        registrar_log(nome_usuario, f"Erro ao tentar ler valor da página: {e}")
+
 if __name__ == "__main__":
     monitorar_preco()
