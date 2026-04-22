@@ -1,115 +1,201 @@
-﻿from funcoes_auxiliares import validar_nome, extrair_numero, verifica_mudanca, registrar_log
+from funcoes_auxiliares import (
+    validar_nome,
+    extrair_numero,
+    registrar_log
+)
 
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import (
+    ElementClickInterceptedException,
+    TimeoutException,
+)
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-def iniciar_driver():
-    """
-    Inicia o Chrome com Selenium.
-    O driver é responsável por controlar o navegador.
-    """
-    service = Service(ChromeDriverManager().install()) # Aqui já instala o driver certo automaticamente e usa ele em Service()
-    driver = webdriver.Chrome(service=service) # Conecta o navegador com o sellenium
-    driver.maximize_window() # Abre o navegador em tela cheia
-    return driver
+DEBUGGER_ADDRESS = "127.0.0.1:9333"
 
-def ler_valor_pagina(driver, url, xpath_campo, usuario):
+def conectar_chrome_aberto(debugger_address):
     """
-    Abre a página e lê o texto do elemento informado por XPath.
-    Depois extrai o número do texto.
+    Conecta o Selenium em um Chrome ja aberto.
     """
-    driver.get(url)
-    time.sleep(5)
+    opcoes = webdriver.ChromeOptions()
+    opcoes.add_experimental_option("debuggerAddress", debugger_address)
 
-    elemento = driver.find_element(By.XPATH, xpath_campo) # Colocamos como parametro o tipo de busca que sera utilizada para encontrar o elemento e expressão XPath inteira que queremos encontrar
+    service = Service(ChromeDriverManager().install())
+    return webdriver.Chrome(service=service, options=opcoes)
+
+def encontrar_aba_por_url(driver, trecho_url):
+    """
+    Procura uma aba aberta cuja URL contenha o trecho informado.
+    """
+    for handle in driver.window_handles:
+        driver.switch_to.window(handle)
+
+        if trecho_url in driver.current_url:
+            return handle
+
+    raise ValueError(f"Nenhuma aba aberta contem a URL: {trecho_url}")
+
+def ler_valor_pagina(driver, xpath_campo, usuario, timeout):
+    """
+    Localiza o elemento informado por XPath e extrai o numero.
+    """
+    registrar_log(usuario, f"Buscando texto pelo XPath: {xpath_campo}", "SISTEMA")
+
+    try:
+        elemento = WebDriverWait(driver, timeout).until(
+            EC.presence_of_element_located((By.XPATH, xpath_campo))
+        )
+    except TimeoutException:
+        raise ValueError("Elemento não encontrado dentro do tempo")
+
     texto = elemento.text.strip()
 
-    registrar_log(usuario, f"Campo localizado com XPath: {xpath_campo}")
-    registrar_log(usuario, f"Texto encontrado no campo: {texto}")
+    registrar_log(usuario, f"Texto encontrado no campo ({xpath_campo}): {texto}", "SISTEMA")
 
     valor = extrair_numero(texto)
+    if valor is None:
+        raise ValueError("Nenhum numero foi encontrado no campo informado.")
 
     return valor
 
-def enviar_para_outra_pagina(driver_pesquisa, valor_antigo, valor_novo, usuario):
-    """
-    Abre o a pagina de formulario em um segundo navegador e realiza a pesquisa.
-    """
+def clicar_por_xpath(driver, xpath, timeout, usuario, descricao):
 
-    mensagem = f"Preco alterado de {valor_antigo} para {valor_novo}"
-    url_formulario = "http://127.0.0.1:5500/commits/10/forms.html"
+    def clicar():
+        try:
+            elemento = WebDriverWait(driver, timeout).until(
+                EC.element_to_be_clickable((By.XPATH, xpath))
+            )
+        except TimeoutException:
+            raise ValueError("Elemento não encontrado dentro do tempo")
 
-    driver_pesquisa.get(url_formulario)
-    time.sleep(5)
+        try:
+            elemento.click()
+        except ElementClickInterceptedException:
+            registrar_log(usuario, f"Clique normal em {descricao} interceptado. Tentando clique via JavaScript.", "SISTEMA")
+            driver.execute_script("arguments[0].click();", elemento)
 
-    campo_texto = driver_pesquisa.find_element(By.XPATH, '//*[@id="campoMensagem"]')
-    campo_texto.clear()
-    campo_texto.send_keys(mensagem)
+    clicar()
+    registrar_log(usuario, f"{descricao} clicado com sucesso.", "SISTEMA")
 
-    botao = driver_pesquisa.find_element(By.XPATH, '//*[@id="botaoSubmit"]')
-    botao.click()
-    time.sleep(10)
+def enviar_para_outra_pagina(
+    driver,
+    xpath_campo_destino,
+    xpath_botao_destino,
+    xpath_botao_ok,
+    mensagem,
+    usuario,
+    timeout,
+):
 
-    registrar_log(usuario, "Botão da segunda página clicado com sucesso.")
+    registrar_log(usuario, "Iniciando envio para a pagina de destino.", "SISTEMA")
+    registrar_log(usuario, f"Buscando campo para limpar pelo XPath: {xpath_campo_destino}", "SISTEMA")
 
-def monitorar_preco():
+    WebDriverWait(driver, timeout).until(
+        EC.presence_of_element_located((By.XPATH, xpath_campo_destino))
+    ).clear()
 
-    print("<<<< MONITOR DE PRECO >>>>")
+    registrar_log(usuario, "Campo limpo com sucesso.", "SISTEMA")
+    registrar_log(usuario, f"Buscando campo para digitar pelo XPath: {xpath_campo_destino}", "SISTEMA")
 
-    nome_usuario = input("Digite seu nome: ").strip()
-    while not validar_nome(nome_usuario):
-        nome_usuario = input("Nome invalido. Digite novamente: ").strip()
+    WebDriverWait(driver, timeout).until(
+        EC.presence_of_element_located((By.XPATH, xpath_campo_destino))
+    ).send_keys(mensagem)
 
-    url = input("Digite a URL para monitorar: ").strip()
-    xpath_campo = input("Digite o XPath do campo: ").strip()
-    intervalo = int(input("Digite o intervalo de tempo do monitoramento (segundos): ").strip())
+    registrar_log(usuario, "Mensagem DIGITADA com sucesso.", "SISTEMA")
 
-    registrar_log(nome_usuario, "Sistema iniciado!")
-    registrar_log(nome_usuario, f"URL informada: {url}")
-    registrar_log(nome_usuario, f"XPath informado: {xpath_campo}")
-    registrar_log(nome_usuario, f"Intervalo informado: {intervalo} segundos")
+    clicar_por_xpath(driver, xpath_botao_destino, timeout, usuario, "Botao Enviar do Gmail")
+
+    registrar_log(usuario, "Mensagem ENVIADA com sucesso.", "SISTEMA")
 
     try:
-        driver_monitor = iniciar_driver()
-        driver_pesquisa = iniciar_driver()
+        clicar_por_xpath(driver, xpath_botao_ok, 5, usuario, "Botao OK do aviso do Gmail")
+    except (TimeoutException, ValueError):
+        registrar_log(usuario, "Botao OK do Gmail nao apareceu. Continuando monitoramento.", "SISTEMA")
 
-        valor_anterior = ler_valor_pagina(driver_monitor, url, xpath_campo, nome_usuario)
-        registrar_log(nome_usuario, f"Valor inicial encontrado: {valor_anterior}")
 
-        while True: 
+def monitorar_preco():
+    """
+    Executa o fluxo principal de monitoramento de preco.
+    """
+    print("<<<< MONITOR DE PRECO >>>>")
+
+    driver = None
+    aba_monitor = None
+    aba_destino = None
+
+    intervalo = 10
+    timeout = 50
+    url_monitorada = "https://coinmarketcap.com/pt-br/currencies/bitcoin/"
+    xpath_campo = "//span[@data-test='text-cdp-price-display']"
+    url_destino = "https://mail.google.com/mail/u/0/#inbox?compose="
+    xpath_campo_destino = "//div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']"
+    xpath_botao_destino = "//td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar']"
+    xpath_botao_ok = "//button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']]"
+
+    nome_usuario = input("Digite seu nome: ").strip()
+
+    while not validar_nome(nome_usuario):
+        nome_usuario = input("Nome invalido. Use apenas letras e espacos, com ao menos 3 caracteres: ").strip()
+
+    registrar_log(nome_usuario, f"Nome de usuário informado: {nome_usuario}", "USUARIO")
+    registrar_log(nome_usuario, "Sistema iniciado!", "SISTEMA")
+
+    try:
+        driver = conectar_chrome_aberto(DEBUGGER_ADDRESS)
+        aba_monitor = encontrar_aba_por_url(driver, url_monitorada)
+        aba_destino = encontrar_aba_por_url(driver, url_destino)
+        registrar_log(nome_usuario, "Conectado ao Chrome ja aberto.", "SISTEMA")
+
+        driver.switch_to.window(aba_monitor)
+        valor_anterior = ler_valor_pagina(driver, xpath_campo, nome_usuario, timeout)
+        registrar_log(nome_usuario, f"Valor inicial encontrado: {valor_anterior}", "SISTEMA")
+
+        while True:
             time.sleep(intervalo)
+            driver.switch_to.window(aba_monitor)
 
-            valor_atual = ler_valor_pagina(driver_monitor, url, xpath_campo, nome_usuario)
+            valor_atual = ler_valor_pagina(driver, xpath_campo, nome_usuario, timeout)
 
-            if verifica_mudanca(valor_anterior, valor_atual):
+            if valor_anterior != valor_atual:
                 print("\nALTERACAO DETECTADA!")
                 print(f"Valor antigo: {valor_anterior}")
                 print(f"Valor novo: {valor_atual}")
 
+                mensagem_mudanca = f"Preco alterado de {valor_anterior} para {valor_atual}"
+
                 registrar_log(
                     nome_usuario,
-                    f"Alteracao detectada. Valor antigo: {valor_anterior} | Valor novo: {valor_atual}"
-                )   
+                    f"Alteracao detectada. {mensagem_mudanca}",
+                    "SISTEMA"
+                )
 
-                enviar_para_outra_pagina(driver_pesquisa, valor_anterior, valor_atual, nome_usuario)
+                driver.switch_to.window(aba_destino)
+                enviar_para_outra_pagina(
+                    driver,
+                    xpath_campo_destino,
+                    xpath_botao_destino,
+                    xpath_botao_ok,
+                    mensagem_mudanca,
+                    nome_usuario,
+                    timeout,
+                )
 
                 valor_anterior = valor_atual
             else:
-                registrar_log(nome_usuario, f"Nenhuma alteracao detectada. Valor atual continua: {valor_atual}")
+                registrar_log(nome_usuario, f"Nenhuma alteracao detectada. Valor atual continua: {valor_atual}", "SISTEMA")
 
+    except KeyboardInterrupt:
+        registrar_log(nome_usuario, "Monitoramento encerrado pelo usuario.", "USUARIO")
     except Exception as e:
-        registrar_log(nome_usuario, f"Erro encontrado: {e}")
+        registrar_log(nome_usuario, f"Erro encontrado: {e}", "SISTEMA")
+    finally:
+        registrar_log(nome_usuario, "Sistema finalizado.", "SISTEMA")
 
-    driver_monitor = iniciar_driver()
-
-    try:
-        valor, texto = ler_valor_pagina(driver_monitor, url, xpath_campo, nome_usuario)
-        registrar_log(nome_usuario, f"Valor '{valor}' encontrado no texto: '{texto}'")
-    except Exception as e:
-        registrar_log(nome_usuario, f"Erro ao tentar ler valor da página: {e}")
 
 if __name__ == "__main__":
     monitorar_preco()

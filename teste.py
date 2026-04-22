@@ -1,9 +1,10 @@
 """
-Testes automatizados
+Testes automatizados das funcoes auxiliares.
 """
 
 import unittest
-from funcoes_auxiliares import validar_nome, extrair_numero, verifica_mudanca
+from funcoes_auxiliares import validar_nome, extrair_numero
+
 
 class Testador(unittest.TestCase):
 
@@ -17,18 +18,12 @@ class Testador(unittest.TestCase):
         self.assertFalse(validar_nome(""))
 
     def test_extrair_numero_inteiro(self):
-        self.assertEqual(extrair_numero("Preço: 500"), 500.0)
+        self.assertEqual(extrair_numero("Preco: 500"), 500.0)
         self.assertEqual(extrair_numero("R$ 1299,90"), 1299.90)
         self.assertEqual(extrair_numero("R$ 1.299,90"), 1299.90)
 
     def test_extrair_numero_sem_numero(self):
-        self.assertIsNone(extrair_numero("Sem preço"))
-
-    def test_verifica_valor_igual(self):
-        self.assertFalse(verifica_mudanca(1, 1))
-    
-    def test_verifica_valor_diferente(self):
-        self.assertTrue(verifica_mudanca(1, 2))
+        self.assertIsNone(extrair_numero("Sem preco"))
 
 
 if __name__ == "__main__":

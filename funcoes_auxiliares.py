@@ -53,19 +53,20 @@ def extrair_numero(texto):
 
     return None
 
-def verifica_mudanca(valor_antigo, valor_novo):
+def registrar_log(usuario, mensagem, origem):
     """
-    Retorna True se o valor mudou.
-    """
-    return valor_antigo != valor_novo
+    Registra uma mensagem de log em um arquivo .txt e imprime a mensagem no terminal.
 
-def registrar_log(usuario, mensagem):
-    """
-    Registra uma mensagem de log em um arquivo .txt e imprime a mensagem no terminal
-    USAR NO LUGAR DO PRINTT
+    Origem:
+    - USUARIO: entradas e acoes feitas pelo usuario.
+    - SISTEMA: acoes automaticas do monitoramento.
     """
     timestamp_atual = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-    linha = f"[{timestamp_atual}] [Usuário: {usuario}] {mensagem}\n"
+
+    if origem == "SISTEMA":
+        linha = f"[{timestamp_atual}] [SISTEMA] {mensagem}\n"
+    else:
+        linha = f"[{timestamp_atual}] [{origem}: {usuario}] {mensagem}\n"
 
     with open("logs.txt", "a", encoding="utf-8") as arquivo:
         arquivo.write(linha)
