@@ -2,6 +2,22 @@
 
 import re
 from datetime import datetime
+from urllib.parse import urlparse
+
+def validar_url(url):
+    """
+    Função que valida a URL
+    """
+    try:
+        resultado = urlparse(url)
+
+        # Verifica se tem esquema (http/https) e domínio
+        if resultado.scheme in ["http", "https"] and resultado.netloc:
+            return True
+        else:
+            return False
+    except:
+        return False
 
 def validar_nome(nome):
     """
@@ -53,19 +69,27 @@ def extrair_numero(texto):
 
     return None
 
-def verifica_mudanca(valor_antigo, valor_novo):
+def limpar_logs():
     """
-    Retorna True se o valor mudou.
+    Limpa o arquivo de logs no inicio de cada monitoramento.
     """
-    return valor_antigo != valor_novo
+    with open("logs.txt", "w", encoding="utf-8") as arquivo:
+        arquivo.write("")
 
-def registrar_log(usuario, mensagem):
+def registrar_log(usuario, mensagem, origem):
     """
-    Registra uma mensagem de log em um arquivo .txt e imprime a mensagem no terminal
-    USAR NO LUGAR DO PRINTT
+    Registra uma mensagem de log em um arquivo .txt e imprime a mensagem no terminal.
+
+    Origem:
+    - USUARIO: entradas e acoes feitas pelo usuario.
+    - SISTEMA: acoes automaticas do monitoramento.
     """
     timestamp_atual = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-    linha = f"[{timestamp_atual}] [Usuário: {usuario}] {mensagem}\n"
+
+    if origem == "SISTEMA":
+        linha = f"[{timestamp_atual}] [SISTEMA] {mensagem}\n"
+    else:
+        linha = f"[{timestamp_atual}] [{origem}: {usuario}] {mensagem}\n"
 
     with open("logs.txt", "a", encoding="utf-8") as arquivo:
         arquivo.write(linha)

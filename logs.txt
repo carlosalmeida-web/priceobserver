@@ -1,4 +1,35 @@
-[08/04/2026 01:28:02] [Usuário: Joao] Sistema iniciado!
-[08/04/2026 01:28:02] [Usuário: Joao] Usuario informado: Joao
-[08/04/2026 01:28:02] [Usuário: Joao] URL informada: aaa
-[08/04/2026 01:28:02] [Usuário: Joao] XPath informado: aaa
+[23/04/2026 19:56:53] [USUARIO: Joao] Nome de usuário informado: Joao
+[23/04/2026 19:56:53] [SISTEMA] Sistema iniciado!
+[23/04/2026 19:56:59] [SISTEMA] Conectado ao Chrome aberto.
+[23/04/2026 19:56:59] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
+[23/04/2026 19:56:59] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
+[23/04/2026 19:56:59] [SISTEMA] Texto encontrado na página MONITORADA: 78.256,21
+[23/04/2026 19:56:59] [SISTEMA] Valor inicial encontrado na pagina monitorada: 78256.21
+[23/04/2026 19:57:09] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
+[23/04/2026 19:57:09] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
+[23/04/2026 19:57:09] [SISTEMA] Texto encontrado na página MONITORADA: 78.216,31
+[23/04/2026 19:57:09] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 78256.21 para 78216.31
+[23/04/2026 19:57:09] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 19:57:09] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 19:57:10] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 19:57:10] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 19:57:11] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 19:57:11] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 19:57:11] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
+[23/04/2026 19:57:21] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
+[23/04/2026 19:57:21] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
+[23/04/2026 19:57:21] [SISTEMA] Texto encontrado na página MONITORADA: 78.220,81
+[23/04/2026 19:57:21] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 78216.31 para 78220.81
+[23/04/2026 19:57:21] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 19:57:21] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 19:57:22] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 19:57:22] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 19:57:22] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 19:57:22] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 19:57:23] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
+[23/04/2026 19:57:33] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
+[23/04/2026 19:57:33] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
+[23/04/2026 19:57:33] [SISTEMA] Texto encontrado na página MONITORADA: 78.220,81
+[23/04/2026 19:57:33] [SISTEMA] Nenhuma alteracao detectada. Valor atual continua: 78220.81
+[23/04/2026 19:57:35] [USUARIO: Joao] Monitoramento encerrado pelo usuario.
+[23/04/2026 19:57:35] [SISTEMA] Sistema finalizado.
