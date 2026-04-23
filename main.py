@@ -2,7 +2,8 @@ from funcoes_auxiliares import (
     validar_nome,
     extrair_numero,
     limpar_logs,
-    registrar_log
+    registrar_log,
+    validar_url
 )
 
 import time
@@ -146,11 +147,16 @@ def monitorar_preco():
     xpath_botao_ok = "//button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']]"
 
     nome_usuario = input("Digite seu nome: ").strip()
-    url_monitorada = input("Digite a URL a ser monitorada: ").strip()
-    xpath_campo = input("Digite o xPath do campo a ser monitorado: ").strip()
 
     while not validar_nome(nome_usuario):
         nome_usuario = input("Nome invalido. Use apenas letras e espacos, com ao menos 3 caracteres: ").strip()
+
+    url_monitorada = input("Digite a URL a ser monitorada: ").strip()
+
+    while not validar_url(url_monitorada):
+        url_monitorada = input("URL inválida. Digite uma URL válida: ").strip()
+
+    xpath_campo = input("Digite o xPath do campo a ser monitorado: ").strip()
 
     registrar_log(nome_usuario, f"Nome de usuário informado: {nome_usuario}", "USUARIO")
     registrar_log(nome_usuario, "Sistema iniciado!", "SISTEMA")
