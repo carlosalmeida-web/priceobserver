@@ -53,6 +53,13 @@ def extrair_numero(texto):
 
     return None
 
+def limpar_logs():
+    """
+    Limpa o arquivo de logs no inicio de cada monitoramento.
+    """
+    with open("logs.txt", "w", encoding="utf-8") as arquivo:
+        arquivo.write("")
+
 def registrar_log(usuario, mensagem, origem):
     """
     Registra uma mensagem de log em um arquivo .txt e imprime a mensagem no terminal.

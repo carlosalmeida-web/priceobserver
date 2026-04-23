@@ -1,6 +1,7 @@
 from funcoes_auxiliares import (
     validar_nome,
     extrair_numero,
+    limpar_logs,
     registrar_log
 )
 
@@ -40,101 +41,101 @@ def encontrar_aba_por_url(driver, trecho_url):
 
     raise ValueError(f"Nenhuma aba aberta contem a URL: {trecho_url}")
 
-def ler_valor_pagina(driver, xpath_campo, usuario, timeout):
+def ler_valor_pagina(driver, xpath, usuario, timeout):
     """
     Localiza o elemento informado por XPath e extrai o numero.
     """
-    registrar_log(usuario, f"Buscando texto pelo XPath: {xpath_campo}", "SISTEMA")
+    registrar_log(usuario, f"Buscando texto na página COINMARKETCAP... (xPATH: {xpath})", "SISTEMA")
 
     try:
         elemento = WebDriverWait(driver, timeout).until(
-            EC.presence_of_element_located((By.XPATH, xpath_campo))
+            EC.presence_of_element_located((By.XPATH, xpath))
         )
     except TimeoutException:
-        raise ValueError("Elemento não encontrado dentro do tempo")
+        raise ValueError("Elemento não encontrado dentro do tempo.")
 
     texto = elemento.text.strip()
 
-    registrar_log(usuario, f"Texto encontrado no campo ({xpath_campo}): {texto}", "SISTEMA")
+    registrar_log(usuario, f"Texto encontrado na página COINMARKETCAP: {texto}", "SISTEMA")
 
     valor = extrair_numero(texto)
     if valor is None:
-        raise ValueError("Nenhum numero foi encontrado no campo informado.")
+        raise ValueError("Nenhum número foi encontrado no campo informado.")
 
     return valor
 
-def clicar_por_xpath(driver, xpath, timeout, usuario, descricao):
+def clicar_botao(driver, xpath, timeout, usuario, descricao):
+    """
+    Localiza o elemento informado por XPath e clica nele.
+    """
 
-    def clicar():
-        try:
-            elemento = WebDriverWait(driver, timeout).until(
-                EC.element_to_be_clickable((By.XPATH, xpath))
-            )
-        except TimeoutException:
-            raise ValueError("Elemento não encontrado dentro do tempo")
+    registrar_log(usuario, f"Buscando botão de {descricao} na página GMAIL... (xPATH: {xpath})", "SISTEMA")
 
-        try:
-            elemento.click()
-        except ElementClickInterceptedException:
-            registrar_log(usuario, f"Clique normal em {descricao} interceptado. Tentando clique via JavaScript.", "SISTEMA")
-            driver.execute_script("arguments[0].click();", elemento)
+    try:
+        elemento = WebDriverWait(driver, timeout).until(
+            EC.element_to_be_clickable((By.XPATH, xpath))
+        )
+    except TimeoutException:
+        raise ValueError("Elemento não encontrado dentro do tempo")
+    
+    try:
+        elemento.click()
+    except ElementClickInterceptedException:
+        # Esse except acontece quando uma mensagem de aviso sem destinatário aparece e estamos fora do email.
+        registrar_log(usuario, f"O botão de {descricao} na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.", "SISTEMA")
+        driver.execute_script("arguments[0].click();", elemento)
+        registrar_log(usuario, f"O botão de {descricao} na página GMAIL foi clicado via JavaScript.", "SISTEMA")
 
-    clicar()
-    registrar_log(usuario, f"{descricao} clicado com sucesso.", "SISTEMA")
+    registrar_log(usuario, f"Botão de {descricao} clicado com sucesso na página GMAIL.", "SISTEMA")
 
 def enviar_para_outra_pagina(
     driver,
-    xpath_campo_destino,
-    xpath_botao_destino,
+    xpath_campo_preencher,
+    xpath_botao_envio,
     xpath_botao_ok,
     mensagem,
     usuario,
     timeout,
 ):
+    """
+    Controla o preenchimendo da mensagem no campo e os botões.
+    """
 
-    registrar_log(usuario, "Iniciando envio para a pagina de destino.", "SISTEMA")
-    registrar_log(usuario, f"Buscando campo para limpar pelo XPath: {xpath_campo_destino}", "SISTEMA")
-
-    WebDriverWait(driver, timeout).until(
-        EC.presence_of_element_located((By.XPATH, xpath_campo_destino))
-    ).clear()
-
-    registrar_log(usuario, "Campo limpo com sucesso.", "SISTEMA")
-    registrar_log(usuario, f"Buscando campo para digitar pelo XPath: {xpath_campo_destino}", "SISTEMA")
-
-    WebDriverWait(driver, timeout).until(
-        EC.presence_of_element_located((By.XPATH, xpath_campo_destino))
-    ).send_keys(mensagem)
-
-    registrar_log(usuario, "Mensagem DIGITADA com sucesso.", "SISTEMA")
-
-    clicar_por_xpath(driver, xpath_botao_destino, timeout, usuario, "Botao Enviar do Gmail")
-
-    registrar_log(usuario, "Mensagem ENVIADA com sucesso.", "SISTEMA")
+    registrar_log(usuario, f"Buscando campo para preencher na página GMAIL... (xPATH: {xpath_campo_preencher})", "SISTEMA")
 
     try:
-        clicar_por_xpath(driver, xpath_botao_ok, 5, usuario, "Botao OK do aviso do Gmail")
-    except (TimeoutException, ValueError):
-        registrar_log(usuario, "Botao OK do Gmail nao apareceu. Continuando monitoramento.", "SISTEMA")
+        elemento = WebDriverWait(driver, timeout).until(
+            EC.presence_of_element_located((By.XPATH, xpath_campo_preencher))
+        )
+        elemento.clear()
+        elemento.send_keys(mensagem)
+    except TimeoutException:
+        raise ValueError("Elemento não encontrado dentro do tempo")
 
+    registrar_log(usuario, "Mensagem preenchida com sucesso na página GMAIL...", "SISTEMA")
+
+    clicar_botao(driver, xpath_botao_envio, timeout, usuario, 'envio')
+
+    try:
+        clicar_botao(driver, xpath_botao_ok, 10, usuario, 'OK para fechar aviso')
+    except (TimeoutException, ValueError):
+        registrar_log(usuario, f"Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.", "SISTEMA")
 
 def monitorar_preco():
     """
     Executa o fluxo principal de monitoramento de preco.
     """
-    print("<<<< MONITOR DE PRECO >>>>")
+    limpar_logs()
 
-    driver = None
-    aba_monitor = None
-    aba_destino = None
+    print("<<<< MONITOR DE PRECO >>>>")
 
     intervalo = 10
     timeout = 50
     url_monitorada = "https://coinmarketcap.com/pt-br/currencies/bitcoin/"
     xpath_campo = "//span[@data-test='text-cdp-price-display']"
-    url_destino = "https://mail.google.com/mail/u/0/#inbox?compose="
-    xpath_campo_destino = "//div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']"
-    xpath_botao_destino = "//td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar']"
+    url_envio = "https://mail.google.com/mail/u/0/#inbox?compose="
+    xpath_campo_preencher = "//div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']"
+    xpath_botao_envio = "//td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar']"
     xpath_botao_ok = "//button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']]"
 
     nome_usuario = input("Digite seu nome: ").strip()
@@ -148,43 +149,35 @@ def monitorar_preco():
     try:
         driver = conectar_chrome_aberto(DEBUGGER_ADDRESS)
         aba_monitor = encontrar_aba_por_url(driver, url_monitorada)
-        aba_destino = encontrar_aba_por_url(driver, url_destino)
-        registrar_log(nome_usuario, "Conectado ao Chrome ja aberto.", "SISTEMA")
+        aba_destino = encontrar_aba_por_url(driver, url_envio)
+        registrar_log(nome_usuario, "Conectado ao Chrome aberto.", "SISTEMA")
 
         driver.switch_to.window(aba_monitor)
+        registrar_log(nome_usuario, f"Aba da página COINMARKETCAP aberta ({url_monitorada}).", "SISTEMA")
         valor_anterior = ler_valor_pagina(driver, xpath_campo, nome_usuario, timeout)
-        registrar_log(nome_usuario, f"Valor inicial encontrado: {valor_anterior}", "SISTEMA")
+        registrar_log(nome_usuario, f"Valor inicial encontrado na pagina monitorada: {valor_anterior}", "SISTEMA")
 
         while True:
             time.sleep(intervalo)
             driver.switch_to.window(aba_monitor)
-
+            registrar_log(nome_usuario, f"Aba da página COINMARKETCAP aberta ({url_monitorada}).", "SISTEMA")
             valor_atual = ler_valor_pagina(driver, xpath_campo, nome_usuario, timeout)
 
             if valor_anterior != valor_atual:
-                print("\nALTERACAO DETECTADA!")
-                print(f"Valor antigo: {valor_anterior}")
-                print(f"Valor novo: {valor_atual}")
-
                 mensagem_mudanca = f"Preco alterado de {valor_anterior} para {valor_atual}"
-
-                registrar_log(
-                    nome_usuario,
-                    f"Alteracao detectada. {mensagem_mudanca}",
-                    "SISTEMA"
-                )
+                registrar_log(nome_usuario, f"ALTERACAO DETECTADA! {mensagem_mudanca}", "SISTEMA")
 
                 driver.switch_to.window(aba_destino)
+                registrar_log(nome_usuario, f"Aba com link da página GMAIL aberta ({url_envio}).", "SISTEMA")
                 enviar_para_outra_pagina(
                     driver,
-                    xpath_campo_destino,
-                    xpath_botao_destino,
+                    xpath_campo_preencher,
+                    xpath_botao_envio,
                     xpath_botao_ok,
                     mensagem_mudanca,
                     nome_usuario,
                     timeout,
                 )
-
                 valor_anterior = valor_atual
             else:
                 registrar_log(nome_usuario, f"Nenhuma alteracao detectada. Valor atual continua: {valor_atual}", "SISTEMA")
