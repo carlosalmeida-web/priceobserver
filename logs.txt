@@ -1,65 +1,35 @@
-[23/04/2026 19:47:10] [USUARIO: Joao] Nome de usuário informado: Joao
-[23/04/2026 19:47:10] [SISTEMA] Sistema iniciado!
-[23/04/2026 19:47:16] [SISTEMA] Conectado ao Chrome aberto.
-[23/04/2026 19:47:16] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
-[23/04/2026 19:47:16] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
-[23/04/2026 19:47:16] [SISTEMA] Texto encontrado na página MONITORADA: 78.282,55
-[23/04/2026 19:47:16] [SISTEMA] Valor inicial encontrado na pagina monitorada: 78282.55
-[23/04/2026 19:47:26] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
-[23/04/2026 19:47:26] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
-[23/04/2026 19:47:26] [SISTEMA] Texto encontrado na página MONITORADA: 78.266,89
-[23/04/2026 19:47:26] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 78282.55 para 78266.89
-[23/04/2026 19:47:26] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
-[23/04/2026 19:47:26] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
-[23/04/2026 19:47:27] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
-[23/04/2026 19:47:27] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
-[23/04/2026 19:47:27] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
-[23/04/2026 19:47:27] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
-[23/04/2026 19:47:27] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
-[23/04/2026 19:47:37] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
-[23/04/2026 19:47:37] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
-[23/04/2026 19:47:38] [SISTEMA] Texto encontrado na página MONITORADA: 78.266,89
-[23/04/2026 19:47:38] [SISTEMA] Nenhuma alteracao detectada. Valor atual continua: 78266.89
-[23/04/2026 19:47:48] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
-[23/04/2026 19:47:48] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
-[23/04/2026 19:47:48] [SISTEMA] Texto encontrado na página MONITORADA: 78.270,31
-[23/04/2026 19:47:48] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 78266.89 para 78270.31
-[23/04/2026 19:47:48] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
-[23/04/2026 19:47:48] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
-[23/04/2026 19:47:49] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
-[23/04/2026 19:47:49] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
-[23/04/2026 19:47:49] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
-[23/04/2026 19:47:49] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
-[23/04/2026 19:47:59] [SISTEMA] Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.
-[23/04/2026 19:48:09] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
-[23/04/2026 19:48:09] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
-[23/04/2026 19:48:09] [SISTEMA] Texto encontrado na página MONITORADA: 78.283,89
-[23/04/2026 19:48:09] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 78270.31 para 78283.89
-[23/04/2026 19:48:09] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
-[23/04/2026 19:48:09] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
-[23/04/2026 19:48:10] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
-[23/04/2026 19:48:10] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
-[23/04/2026 19:48:11] [SISTEMA] O botão de envio na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.
-[23/04/2026 19:48:11] [SISTEMA] O botão de envio na página GMAIL foi clicado via JavaScript.
-[23/04/2026 19:48:11] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
-[23/04/2026 19:48:11] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
-[23/04/2026 19:48:22] [SISTEMA] Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.
-[23/04/2026 19:48:32] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
-[23/04/2026 19:48:32] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
-[23/04/2026 19:48:32] [SISTEMA] Texto encontrado na página MONITORADA: 78.316,72
-[23/04/2026 19:48:32] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 78283.89 para 78316.72
-[23/04/2026 19:48:32] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
-[23/04/2026 19:48:32] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
-[23/04/2026 19:48:33] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
-[23/04/2026 19:48:33] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
-[23/04/2026 19:48:33] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
-[23/04/2026 19:48:33] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
-[23/04/2026 19:48:34] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
-[23/04/2026 19:48:44] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
-[23/04/2026 19:48:44] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
-[23/04/2026 19:48:44] [SISTEMA] Texto encontrado na página MONITORADA: 78.316,73
-[23/04/2026 19:48:44] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 78316.72 para 78316.73
-[23/04/2026 19:48:44] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
-[23/04/2026 19:48:44] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
-[23/04/2026 19:48:44] [USUARIO: Joao] Monitoramento encerrado pelo usuario.
-[23/04/2026 19:48:44] [SISTEMA] Sistema finalizado.
+[23/04/2026 19:56:53] [USUARIO: Joao] Nome de usuário informado: Joao
+[23/04/2026 19:56:53] [SISTEMA] Sistema iniciado!
+[23/04/2026 19:56:59] [SISTEMA] Conectado ao Chrome aberto.
+[23/04/2026 19:56:59] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
+[23/04/2026 19:56:59] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
+[23/04/2026 19:56:59] [SISTEMA] Texto encontrado na página MONITORADA: 78.256,21
+[23/04/2026 19:56:59] [SISTEMA] Valor inicial encontrado na pagina monitorada: 78256.21
+[23/04/2026 19:57:09] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
+[23/04/2026 19:57:09] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
+[23/04/2026 19:57:09] [SISTEMA] Texto encontrado na página MONITORADA: 78.216,31
+[23/04/2026 19:57:09] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 78256.21 para 78216.31
+[23/04/2026 19:57:09] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 19:57:09] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 19:57:10] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 19:57:10] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 19:57:11] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 19:57:11] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 19:57:11] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
+[23/04/2026 19:57:21] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
+[23/04/2026 19:57:21] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
+[23/04/2026 19:57:21] [SISTEMA] Texto encontrado na página MONITORADA: 78.220,81
+[23/04/2026 19:57:21] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 78216.31 para 78220.81
+[23/04/2026 19:57:21] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 19:57:21] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 19:57:22] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 19:57:22] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 19:57:22] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 19:57:22] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 19:57:23] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
+[23/04/2026 19:57:33] [SISTEMA] Aba da página MONITORADA aberta (https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot).
+[23/04/2026 19:57:33] [SISTEMA] Buscando texto na página MONITORADA... (xPATH: //div[@class='nowPrice']//div[contains(@class,'showPrice')])
+[23/04/2026 19:57:33] [SISTEMA] Texto encontrado na página MONITORADA: 78.220,81
+[23/04/2026 19:57:33] [SISTEMA] Nenhuma alteracao detectada. Valor atual continua: 78220.81
+[23/04/2026 19:57:35] [USUARIO: Joao] Monitoramento encerrado pelo usuario.
+[23/04/2026 19:57:35] [SISTEMA] Sistema finalizado.

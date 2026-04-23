@@ -2,6 +2,22 @@
 
 import re
 from datetime import datetime
+from urllib.parse import urlparse
+
+def validar_url(url):
+    """
+    Função que valida a URL
+    """
+    try:
+        resultado = urlparse(url)
+
+        # Verifica se tem esquema (http/https) e domínio
+        if resultado.scheme in ["http", "https"] and resultado.netloc:
+            return True
+        else:
+            return False
+    except:
+        return False
 
 def validar_nome(nome):
     """
