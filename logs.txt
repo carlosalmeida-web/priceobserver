@@ -1,63 +1,170 @@
-[22/04/2026 20:43:04] [USUARIO: Joao] Nome de usuário informado: Joao
-[22/04/2026 20:43:04] [SISTEMA] Sistema iniciado!
-[22/04/2026 20:43:10] [SISTEMA] Conectado ao Chrome ja aberto.
-[22/04/2026 20:43:10] [SISTEMA] Buscando texto pelo XPath: //span[@data-test='text-cdp-price-display']
-[22/04/2026 20:43:10] [SISTEMA] Texto encontrado no campo (//span[@data-test='text-cdp-price-display']): R$ 390.186,29
-[22/04/2026 20:43:10] [SISTEMA] Valor inicial encontrado: 390186.29
-[22/04/2026 20:43:20] [SISTEMA] Buscando texto pelo XPath: //span[@data-test='text-cdp-price-display']
-[22/04/2026 20:43:20] [SISTEMA] Texto encontrado no campo (//span[@data-test='text-cdp-price-display']): R$ 390.192,64
-[22/04/2026 20:43:20] [SISTEMA] Alteracao detectada. Preco alterado de 390186.29 para 390192.64
-[22/04/2026 20:43:20] [SISTEMA] Iniciando envio para a pagina de destino.
-[22/04/2026 20:43:20] [SISTEMA] Buscando campo para limpar pelo XPath: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']
-[22/04/2026 20:43:20] [SISTEMA] Campo limpo com sucesso.
-[22/04/2026 20:43:20] [SISTEMA] Buscando campo para digitar pelo XPath: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']
-[22/04/2026 20:43:21] [SISTEMA] Mensagem DIGITADA com sucesso.
-[22/04/2026 20:43:21] [SISTEMA] Botao Enviar do Gmail clicado com sucesso.
-[22/04/2026 20:43:21] [SISTEMA] Mensagem ENVIADA com sucesso.
-[22/04/2026 20:43:22] [SISTEMA] Botao OK do aviso do Gmail clicado com sucesso.
-[22/04/2026 20:43:32] [SISTEMA] Buscando texto pelo XPath: //span[@data-test='text-cdp-price-display']
-[22/04/2026 20:43:32] [SISTEMA] Texto encontrado no campo (//span[@data-test='text-cdp-price-display']): R$ 390.161,05
-[22/04/2026 20:43:32] [SISTEMA] Alteracao detectada. Preco alterado de 390192.64 para 390161.05
-[22/04/2026 20:43:32] [SISTEMA] Iniciando envio para a pagina de destino.
-[22/04/2026 20:43:32] [SISTEMA] Buscando campo para limpar pelo XPath: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']
-[22/04/2026 20:43:32] [SISTEMA] Campo limpo com sucesso.
-[22/04/2026 20:43:32] [SISTEMA] Buscando campo para digitar pelo XPath: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']
-[22/04/2026 20:43:32] [SISTEMA] Mensagem DIGITADA com sucesso.
-[22/04/2026 20:43:33] [SISTEMA] Botao Enviar do Gmail clicado com sucesso.
-[22/04/2026 20:43:33] [SISTEMA] Mensagem ENVIADA com sucesso.
-[22/04/2026 20:43:33] [SISTEMA] Botao OK do aviso do Gmail clicado com sucesso.
-[22/04/2026 20:43:43] [SISTEMA] Buscando texto pelo XPath: //span[@data-test='text-cdp-price-display']
-[22/04/2026 20:43:43] [SISTEMA] Texto encontrado no campo (//span[@data-test='text-cdp-price-display']): R$ 390.196,65
-[22/04/2026 20:43:43] [SISTEMA] Alteracao detectada. Preco alterado de 390161.05 para 390196.65
-[22/04/2026 20:43:43] [SISTEMA] Iniciando envio para a pagina de destino.
-[22/04/2026 20:43:43] [SISTEMA] Buscando campo para limpar pelo XPath: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']
-[22/04/2026 20:43:43] [SISTEMA] Campo limpo com sucesso.
-[22/04/2026 20:43:43] [SISTEMA] Buscando campo para digitar pelo XPath: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']
-[22/04/2026 20:43:44] [SISTEMA] Mensagem DIGITADA com sucesso.
-[22/04/2026 20:43:44] [SISTEMA] Botao Enviar do Gmail clicado com sucesso.
-[22/04/2026 20:43:44] [SISTEMA] Mensagem ENVIADA com sucesso.
-[22/04/2026 20:43:50] [SISTEMA] Botao OK do Gmail nao apareceu. Continuando monitoramento.
-[22/04/2026 20:44:00] [SISTEMA] Buscando texto pelo XPath: //span[@data-test='text-cdp-price-display']
-[22/04/2026 20:44:00] [SISTEMA] Texto encontrado no campo (//span[@data-test='text-cdp-price-display']): R$ 390.218,95
-[22/04/2026 20:44:00] [SISTEMA] Alteracao detectada. Preco alterado de 390196.65 para 390218.95
-[22/04/2026 20:44:00] [SISTEMA] Iniciando envio para a pagina de destino.
-[22/04/2026 20:44:00] [SISTEMA] Buscando campo para limpar pelo XPath: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']
-[22/04/2026 20:44:00] [SISTEMA] Campo limpo com sucesso.
-[22/04/2026 20:44:00] [SISTEMA] Buscando campo para digitar pelo XPath: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']
-[22/04/2026 20:44:00] [SISTEMA] Mensagem DIGITADA com sucesso.
-[22/04/2026 20:44:01] [SISTEMA] Botao Enviar do Gmail clicado com sucesso.
-[22/04/2026 20:44:01] [SISTEMA] Mensagem ENVIADA com sucesso.
-[22/04/2026 20:44:01] [SISTEMA] Botao OK do aviso do Gmail clicado com sucesso.
-[22/04/2026 20:44:11] [SISTEMA] Buscando texto pelo XPath: //span[@data-test='text-cdp-price-display']
-[22/04/2026 20:44:12] [SISTEMA] Texto encontrado no campo (//span[@data-test='text-cdp-price-display']): R$ 390.270,98
-[22/04/2026 20:44:12] [SISTEMA] Alteracao detectada. Preco alterado de 390218.95 para 390270.98
-[22/04/2026 20:44:12] [SISTEMA] Iniciando envio para a pagina de destino.
-[22/04/2026 20:44:12] [SISTEMA] Buscando campo para limpar pelo XPath: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']
-[22/04/2026 20:44:12] [SISTEMA] Campo limpo com sucesso.
-[22/04/2026 20:44:12] [SISTEMA] Buscando campo para digitar pelo XPath: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']
-[22/04/2026 20:44:12] [SISTEMA] Mensagem DIGITADA com sucesso.
-[22/04/2026 20:44:13] [SISTEMA] Botao Enviar do Gmail clicado com sucesso.
-[22/04/2026 20:44:13] [SISTEMA] Mensagem ENVIADA com sucesso.
-[22/04/2026 20:44:13] [SISTEMA] Botao OK do aviso do Gmail clicado com sucesso.
-[22/04/2026 20:44:19] [USUARIO: Joao] Monitoramento encerrado pelo usuario.
-[22/04/2026 20:44:19] [SISTEMA] Sistema finalizado.
+[23/04/2026 14:40:57] [USUARIO: Joao] Nome de usuário informado: Joao
+[23/04/2026 14:40:57] [SISTEMA] Sistema iniciado!
+[23/04/2026 14:41:01] [SISTEMA] Conectado ao Chrome aberto.
+[23/04/2026 14:41:02] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:41:02] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:41:02] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 383.820,35
+[23/04/2026 14:41:02] [SISTEMA] Valor inicial encontrado na pagina monitorada: 383820.35
+[23/04/2026 14:41:12] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:41:12] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:41:12] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 383.746,35
+[23/04/2026 14:41:12] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 383820.35 para 383746.35
+[23/04/2026 14:41:12] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:41:12] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:41:12] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:41:12] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:41:13] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:41:13] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:41:23] [SISTEMA] Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.
+[23/04/2026 14:41:33] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:41:33] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:41:33] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 383.716,80
+[23/04/2026 14:41:33] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 383746.35 para 383716.8
+[23/04/2026 14:41:33] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:41:33] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:41:34] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:41:34] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:41:35] [SISTEMA] O botão de envio na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.
+[23/04/2026 14:41:35] [SISTEMA] O botão de envio na página GMAIL foi clicado via JavaScript.
+[23/04/2026 14:41:35] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:41:35] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:41:45] [SISTEMA] Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.
+[23/04/2026 14:41:55] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:41:55] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:41:55] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 383.858,14
+[23/04/2026 14:41:55] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 383716.8 para 383858.14
+[23/04/2026 14:41:55] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:41:55] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:41:56] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:41:56] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:41:57] [SISTEMA] O botão de envio na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.
+[23/04/2026 14:41:57] [SISTEMA] O botão de envio na página GMAIL foi clicado via JavaScript.
+[23/04/2026 14:41:57] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:41:57] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:42:07] [SISTEMA] Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.
+[23/04/2026 14:42:17] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:42:17] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:42:17] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 383.810,27
+[23/04/2026 14:42:17] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 383858.14 para 383810.27
+[23/04/2026 14:42:17] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:42:17] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:42:18] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:42:18] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:42:19] [SISTEMA] O botão de envio na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.
+[23/04/2026 14:42:19] [SISTEMA] O botão de envio na página GMAIL foi clicado via JavaScript.
+[23/04/2026 14:42:19] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:42:19] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:42:29] [SISTEMA] Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.
+[23/04/2026 14:42:39] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:42:39] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:42:39] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 384.159,06
+[23/04/2026 14:42:39] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 383810.27 para 384159.06
+[23/04/2026 14:42:39] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:42:39] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:42:40] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:42:40] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:42:41] [SISTEMA] O botão de envio na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.
+[23/04/2026 14:42:41] [SISTEMA] O botão de envio na página GMAIL foi clicado via JavaScript.
+[23/04/2026 14:42:41] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:42:41] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:42:51] [SISTEMA] Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.
+[23/04/2026 14:43:01] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:43:01] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:43:01] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 384.438,52
+[23/04/2026 14:43:01] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 384159.06 para 384438.52
+[23/04/2026 14:43:01] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:43:01] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:43:02] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:43:02] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:43:03] [SISTEMA] O botão de envio na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.
+[23/04/2026 14:43:03] [SISTEMA] O botão de envio na página GMAIL foi clicado via JavaScript.
+[23/04/2026 14:43:03] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:43:03] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:43:13] [SISTEMA] Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.
+[23/04/2026 14:43:23] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:43:23] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:43:23] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 384.404,65
+[23/04/2026 14:43:23] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 384438.52 para 384404.65
+[23/04/2026 14:43:23] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:43:23] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:43:24] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:43:24] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:43:25] [SISTEMA] O botão de envio na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.
+[23/04/2026 14:43:25] [SISTEMA] O botão de envio na página GMAIL foi clicado via JavaScript.
+[23/04/2026 14:43:25] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:43:25] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:43:35] [SISTEMA] Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.
+[23/04/2026 14:43:45] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:43:45] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:43:45] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 384.581,66
+[23/04/2026 14:43:45] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 384404.65 para 384581.66
+[23/04/2026 14:43:45] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:43:45] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:43:46] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:43:46] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:43:47] [SISTEMA] O botão de envio na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.
+[23/04/2026 14:43:47] [SISTEMA] O botão de envio na página GMAIL foi clicado via JavaScript.
+[23/04/2026 14:43:47] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:43:47] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:43:57] [SISTEMA] Botão de OK para fechar aviso não foi encontrado na página GMAIL. Lembre de permanecer com o Chrome em primeiro plano.
+[23/04/2026 14:44:07] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:44:07] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:44:07] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 384.613,82
+[23/04/2026 14:44:07] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 384581.66 para 384613.82
+[23/04/2026 14:44:07] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:44:07] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:44:08] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:44:08] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:44:09] [SISTEMA] O botão de envio na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.
+[23/04/2026 14:44:09] [SISTEMA] O botão de envio na página GMAIL foi clicado via JavaScript.
+[23/04/2026 14:44:09] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:44:09] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:44:14] [SISTEMA] O botão de OK para fechar aviso na página GMAIL foi interceptado. Evite sair da página do GMAIL, para não acumular avisos. Tentando clique via JavaScript.
+[23/04/2026 14:44:14] [SISTEMA] O botão de OK para fechar aviso na página GMAIL foi clicado via JavaScript.
+[23/04/2026 14:44:14] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
+[23/04/2026 14:44:24] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:44:24] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:44:25] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 384.574,85
+[23/04/2026 14:44:25] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 384613.82 para 384574.85
+[23/04/2026 14:44:25] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:44:25] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:44:25] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:44:25] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:44:26] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:44:26] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:44:26] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
+[23/04/2026 14:44:36] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:44:36] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:44:37] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 384.539,70
+[23/04/2026 14:44:37] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 384574.85 para 384539.7
+[23/04/2026 14:44:37] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:44:37] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:44:37] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:44:37] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:44:37] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:44:37] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:44:38] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
+[23/04/2026 14:44:48] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:44:48] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:44:48] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 384.380,74
+[23/04/2026 14:44:48] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 384539.7 para 384380.74
+[23/04/2026 14:44:48] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:44:48] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:44:48] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:44:48] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:44:49] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:44:49] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:44:49] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
+[23/04/2026 14:44:59] [SISTEMA] Aba da página COINMARKETCAP aberta (https://coinmarketcap.com/pt-br/currencies/bitcoin/).
+[23/04/2026 14:44:59] [SISTEMA] Buscando texto na página COINMARKETCAP... (xPATH: //span[@data-test='text-cdp-price-display'])
+[23/04/2026 14:44:59] [SISTEMA] Texto encontrado na página COINMARKETCAP: R$ 384.409,78
+[23/04/2026 14:44:59] [SISTEMA] ALTERACAO DETECTADA! Preco alterado de 384380.74 para 384409.78
+[23/04/2026 14:44:59] [SISTEMA] Aba com link da página GMAIL aberta (https://mail.google.com/mail/u/0/#inbox?compose=).
+[23/04/2026 14:44:59] [SISTEMA] Buscando campo para preencher na página GMAIL... (xPATH: //div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true'])
+[23/04/2026 14:44:59] [SISTEMA] Mensagem preenchida com sucesso na página GMAIL...
+[23/04/2026 14:44:59] [SISTEMA] Buscando botão de envio na página GMAIL... (xPATH: //td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar'])
+[23/04/2026 14:45:00] [SISTEMA] Botão de envio clicado com sucesso na página GMAIL.
+[23/04/2026 14:45:00] [SISTEMA] Buscando botão de OK para fechar aviso na página GMAIL... (xPATH: //button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']])
+[23/04/2026 14:45:05] [SISTEMA] Botão de OK para fechar aviso clicado com sucesso na página GMAIL.
+[23/04/2026 14:45:09] [USUARIO: Joao] Monitoramento encerrado pelo usuario.
+[23/04/2026 14:45:09] [SISTEMA] Sistema finalizado.
