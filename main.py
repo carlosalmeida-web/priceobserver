@@ -45,7 +45,7 @@ def ler_valor_pagina(driver, xpath, usuario, timeout):
     """
     Localiza o elemento informado por XPath e extrai o numero.
     """
-    registrar_log(usuario, f"Buscando texto na página COINMARKETCAP... (xPATH: {xpath})", "SISTEMA")
+    registrar_log(usuario, f"Buscando texto na página MONITORADA... (xPATH: {xpath})", "SISTEMA")
 
     try:
         elemento = WebDriverWait(driver, timeout).until(
@@ -56,7 +56,7 @@ def ler_valor_pagina(driver, xpath, usuario, timeout):
 
     texto = elemento.text.strip()
 
-    registrar_log(usuario, f"Texto encontrado na página COINMARKETCAP: {texto}", "SISTEMA")
+    registrar_log(usuario, f"Texto encontrado na página MONITORADA: {texto}", "SISTEMA")
 
     valor = extrair_numero(texto)
     if valor is None:
@@ -131,14 +131,23 @@ def monitorar_preco():
 
     intervalo = 10
     timeout = 50
-    url_monitorada = "https://coinmarketcap.com/pt-br/currencies/bitcoin/"
-    xpath_campo = "//span[@data-test='text-cdp-price-display']"
+
+    #CoinMarketCap
+    #url_monitorada = "https://coinmarketcap.com/pt-br/currencies/bitcoin/"
+    #xpath_campo = "//span[@data-test='text-cdp-price-display']"
+
+    #Binance
+    #url_monitorada = "https://www.binance.com/pt-BR/trade/BTC_USDT?_from=markets&type=spot"
+    #xpath_campo = "//div[@class='nowPrice']//div[contains(@class,'showPrice')]"
+    
     url_envio = "https://mail.google.com/mail/u/0/#inbox?compose="
     xpath_campo_preencher = "//div[@role='textbox' and @aria-label='Corpo da mensagem' and @contenteditable='true']"
     xpath_botao_envio = "//td[contains(@class, 'gU') and contains(@class, 'Up')]//div[@role='button' and contains(@aria-label, 'Enviar') and normalize-space()='Enviar']"
     xpath_botao_ok = "//button[@data-mdc-dialog-action='ok' and .//span[normalize-space()='OK']]"
 
     nome_usuario = input("Digite seu nome: ").strip()
+    url_monitorada = input("Digite a URL a ser monitorada: ").strip()
+    xpath_campo = input("Digite o xPath do campo a ser monitorado: ").strip()
 
     while not validar_nome(nome_usuario):
         nome_usuario = input("Nome invalido. Use apenas letras e espacos, com ao menos 3 caracteres: ").strip()
@@ -153,14 +162,14 @@ def monitorar_preco():
         registrar_log(nome_usuario, "Conectado ao Chrome aberto.", "SISTEMA")
 
         driver.switch_to.window(aba_monitor)
-        registrar_log(nome_usuario, f"Aba da página COINMARKETCAP aberta ({url_monitorada}).", "SISTEMA")
+        registrar_log(nome_usuario, f"Aba da página MONITORADA aberta ({url_monitorada}).", "SISTEMA")
         valor_anterior = ler_valor_pagina(driver, xpath_campo, nome_usuario, timeout)
         registrar_log(nome_usuario, f"Valor inicial encontrado na pagina monitorada: {valor_anterior}", "SISTEMA")
 
         while True:
             time.sleep(intervalo)
             driver.switch_to.window(aba_monitor)
-            registrar_log(nome_usuario, f"Aba da página COINMARKETCAP aberta ({url_monitorada}).", "SISTEMA")
+            registrar_log(nome_usuario, f"Aba da página MONITORADA aberta ({url_monitorada}).", "SISTEMA")
             valor_atual = ler_valor_pagina(driver, xpath_campo, nome_usuario, timeout)
 
             if valor_anterior != valor_atual:
